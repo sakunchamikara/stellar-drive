@@ -19,7 +19,7 @@ jobs:
     - name: Build the docker image
       run: docker build . --file Dockerfile --tag stellardrive:latest
 
-    # - name: Docker tag
-    #   run: docker tag stellardrive:latest ${{secrets.DOCKERHUB_USERNAME}}/stellardrive:latest
+    - name: Docker tag
+      run: docker tag stellardrive:latest ${{secrets.DOCKERHUB_USERNAME}}/stellardrive:latest
     - name: Docker push
       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/stellardrive:latest
