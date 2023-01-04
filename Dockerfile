@@ -3,8 +3,8 @@ FROM node:19-alpine3.16
 # Create a working directory
 WORKDIR /app
 
-# Copy the package.json file
-COPY package.json .
+# Copy the package.json & package-lock.json file
+COPY package*.json ./
 
 # Install the dependencies
 RUN npm install
